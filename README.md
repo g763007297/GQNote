@@ -23,6 +23,9 @@
 ```objc
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "这里填写需要消除的Warning类型"
+
+need clear warnings code
+
 #pragma clang diagnostic pop
 ```
 
