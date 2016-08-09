@@ -1,24 +1,35 @@
-`# GQNote
+# GQNote
 
 - [1.pod](#1)
 	- [(1)import](#1.1)
 - [2.Xcode](#2)
 	- [(1)Clear warnings](#2.1)
-
+		- [(1)Semantic Warnings](#2.1.1)
+		- [(2)Lexer Warnings](#2.1.2)
+		- [(3)Parser Warnings](#2.1.3)
+		
 <a id='1'></a>
 ## 1.pod
 <a id='1.1'></a>
-### (1) used
+### 1.1 used
 
 当@import某个库报错时修改Xcode Build Settings的"allow non-modular includes in framework modules" 为yes就可以了
 
 <a id='2'></a>
 ## 2.Xcode
 <a id='2.1'></a>
-### (1) Clear warnings
+### 2.1 Clear warnings
 
-Semantic Warnings
+```objc
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "这里填写需要消除的Warning类型"
+#pragma clang diagnostic pop
+```
 
+<a id='2.1.1'></a>
+#### 2.1.1 Semantic Warnings
+
+```objc
 Warning    		Message
 
 -WCFString-literal    input conversion stopped due to an input byte that does not belong to the input codeset UTF-8
@@ -950,7 +961,11 @@ multiple times in this %select{function|method|block|lambda}2 but may be unpredi
 
 -Wweak-vtables    %0 has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit
 
-Lexer Warnings
+```
+<a id='2.1.2'></a>
+#### 2.1.2 Lexer Warnings
+
+```objc
 
 Warning    Message
 
@@ -1045,7 +1060,12 @@ Warning    Message
 
 -Wunused-macros    macro is not used
 
-Parser Warnings
+```
+
+<a id='2.1.3'></a>
+#### 2.1.3 Parser Warnings
+
+```objc
 
 Warning    Message
 
@@ -1141,4 +1161,5 @@ Warning    Message
 -Wsource-uses-openmp    "unexpected '#pragma omp ...' in program
 
 -Wstatic-inline-explicit-instantiation    ignoring '%select{static|inline}0' keyword on explicit template instantiation
-`
+
+```
