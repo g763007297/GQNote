@@ -7,6 +7,7 @@
 		- [(1)Semantic Warnings](#2.1.1)
 		- [(2)Lexer Warnings](#2.1.2)
 		- [(3)Parser Warnings](#2.1.3)
+	- [(2)指定默认Xcode](#2.2)
 		
 <a id='1'></a>
 ## 1.pod
@@ -1166,3 +1167,9 @@ Warning    Message
 -Wstatic-inline-explicit-instantiation    ignoring '%select{static|inline}0' keyword on explicit template instantiation
 
 ```
+<a id='2.2'></a>
+### 2.2 指定默认Xcode
+一句命令就可以搞定:
+
+ $ sudo xcode-select -switch /Applications/Xcode.app/
+ 
