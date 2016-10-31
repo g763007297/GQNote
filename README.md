@@ -8,6 +8,8 @@
 		- [(2)Lexer Warnings](#2.1.2)
 		- [(3)Parser Warnings](#2.1.3)
 	- [(2)指定默认Xcode](#2.2)
+- [3.Mac系统问题](#3)
+- [4.git命令](#4) 
 		
 <a id='1'></a>
 ## 1.pod
@@ -1173,3 +1175,35 @@ Warning    Message
 
  $ sudo xcode-select -switch /Applications/Xcode.app/
  
+ <a id='3'></a>
+ ## 3 MAC系统问题
+ 
+ ###3.1
+
+(1)重启OSX系统，然后按住Command+R
+(2)出现界面之后，选择Utilities menu中Terminal
+(3)在Terminal中输入csrutil disable关闭SIP(csrutil enable打开SIP)
+(4)重启reboot OSX
+(5)重启之后开启之前闪退或者打不开的软件一次(必须要)
+(6)重启机器重复(1,2步)，在第三步输入csrutil enable开启SIP
+(7)重启机器，完美。
+ 
+ <a id='4'></a>
+ ## 4 git命令
+ 
+ ###4.1
+ 新增tag: (1)、 git tag -m "简介" "tag名称"  (2)、 git push --tags
+ 
+ 删除远程tag:  git push origin :"tag名称"
+
+ 显示本地tag:  git tag
+
+ 删除本地tag:  git tag -d "tag名称"
+ 
+ 创建本地分支:  git branch branchName
+ 
+ 创建分支后切换到新分支:  git checkout -b branchName
+ 
+ 删除远程分支:  git branch -r -d "分支名称"
+ 
+ 合并分支:   git merge branchName
