@@ -18,6 +18,17 @@
 
 当@import某个库报错时修改Xcode Build Settings的"allow non-modular includes in framework modules" 为yes就可以了
 
+报错 ··· error: include of non-modular header inside framework module ··· [-Werror,-Wnon-modular-include-in-framework-module]
+
+解决办法：在pod lib lint 或者 pod spec lint 以及 pod repo push ....时候加上   --use-libraries
+
+    pod lib lint --use-libraries
+    #或者
+    pod spec lint --use-libraries
+
+    #当然，在提交的时候也要加上
+    pod repo push <repoName> <podspec> --use-libraries
+
 <a id='2'></a>
 ## 2.Xcode
 <a id='2.1'></a>
