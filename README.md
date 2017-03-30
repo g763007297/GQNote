@@ -28,6 +28,7 @@
 
     #当然，在提交的时候也要加上
     pod repo push <repoName> <podspec> --use-libraries
+    pod trunk push <repoName> <podspec> --use-libraries
 
 <a id='2'></a>
 ## 2.Xcode
