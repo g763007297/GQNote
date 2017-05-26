@@ -1181,6 +1181,13 @@ Warning    Message
 -Wstatic-inline-explicit-instantiation    ignoring '%select{static|inline}0' keyword on explicit template instantiation
 
 ```
+#### 2.1.4 Xcode其他警告
+
+```objc
+was built for newer iOS version (x.x) than being linked (x.x)   在Build Settings -> other lingker Flags 中添加-w 就可以解决了
+
+```
+
 <a id='2.2'></a>
 ### 2.2 指定默认Xcode
 一句命令就可以搞定:
